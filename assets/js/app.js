@@ -54,8 +54,8 @@ function makeApiCall(method,url,body=null){
               xhr.send(body ? JSON.stringify(body) : null) 
              
              xhr.onload = function (){ 
-                 let res  = JSON.parse(xhr.response);
-                  if(xhr.status>=200 && xhr.status<=299){ 
+                 if(xhr.status>=200 && xhr.status<=299){ 
+                      let res  = JSON.parse(xhr.response);
                       if(method=== "GET"){ 
                           resolve(res);
                             tooltip();
