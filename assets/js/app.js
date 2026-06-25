@@ -284,8 +284,8 @@ function  onUpdate(){
             body:bodyControl.value
        }
        makeApiCall('PATCH', updateUrl,updateObj) 
-        .then((res)=>{ 
-             updateCard(res);
+        .then(()=>{ 
+             updateCard(updateObj);
              snackbar('updated successfully.....!', 'success');
                            
               onEdit= false;
