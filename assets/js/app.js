@@ -123,6 +123,7 @@ function fetchPost(){
     makeApiCall('GET',post_url,null)
        .then((res)=>{ 
             createCards(res);
+            postForm.reset();
        })
 
        .catch((rej)=>{ 
@@ -153,9 +154,7 @@ function onSubmit(eve){
 
      //This approach is for when we update form using  and click on update button  using 'Enter' Key 
 
-     if(onEdit){ 
-           onUpdate();
-     }else{
+     
          
           makeApiCall('POST',post_url ,newObj)
                   .then((res)=>{ 
@@ -170,7 +169,7 @@ function onSubmit(eve){
                         spinner.classList.add('d-none');
                   })
 
-     }
+  
    
 
 } 
