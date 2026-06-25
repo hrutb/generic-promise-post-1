@@ -69,7 +69,7 @@ function makeApiCall(method,url,body=null){
                              tooltip();
 
                         }else{ 
-                             resolve(res);
+                             resolve();
                              tooltip();
                           }
                   
